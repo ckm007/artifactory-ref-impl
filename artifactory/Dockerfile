@@ -25,7 +25,7 @@ ENV reprocessor_jar_path=${base_path}/io/mosip/testing/
 ENV idobject_jar_path=${base_path}/libs-snapshot-local/io/mosip/kernel
 
 # environment variable for jar version to be downloaed, this needed to be passes runtime
-ENV version=${version}
+ENV version=1.1.3
 
 # environment variable for auth-adapter-jar url
 ENV auth_adapter_jar_url=https://repo1.maven.org/maven2/io/mosip/kernel/kernel-auth-adapter/${version}/kernel-auth-adapter-${version}.jar
