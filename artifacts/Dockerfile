@@ -72,8 +72,6 @@ COPY /src/biosdk/biosdk.zip ${biosdk_zip_path}/
 
 COPY /src/deployment/docker/id-authentication/* ${ida_sh_path}/
 
-COPY /src/cache/cache-provider.jar ${cache_path}/
-
 COPY /src/hsm/client.zip ${hsm_client_path}/
 
 COPY /src/testing/regproc-reprocessor-ceylon-cache-repo.zip ${test_jar_path}/
@@ -86,4 +84,5 @@ COPY /src/auth/* ${regproc_jar_path}/
 
 RUN wget ${auth_adapter_jar_url} -O ${kernel_jar_path}/kernel-auth-adapter.jar  &&\ 
  wget ${sms_msg91_url} -O ${kernel_jar_path}/kernel-smsserviceprovider-msg91.jar  &&\
- wget ${ref_idobjectvalidator_jar_url} -O ${idobject_jar_path}/kernel-ref-idobjectvalidator.jar
+ wget ${ref_idobjectvalidator_jar_url} -O ${idobject_jar_path}/kernel-ref-idobjectvalidator.jar &&\
+ wget https://repo1.maven.org/maven2/com/hazelcast/hazelcast-all/4.1.1/hazelcast-all-4.1.1.jar -O ${cache_path}/cache-provider.jar
